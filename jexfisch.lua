@@ -42,14 +42,14 @@ end)
 warn("[Anti Afk] - loaded successfully") 
 
 --<>----<>----<>----< Main Script >----<>----<>----<>--
-print("[Space Hub | Fisch]: loading...")
+print("[ZeX Hub | Fisch]: loading...")
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Fisch | Space Hub",
-    SubTitle = "v1.6",
+    Title = "Fisch | ZeX Hub Priv8",
+    SubTitle = "v1.1",
     TabWidth = 150,
     Size = UDim2.fromOffset(600, 400),
     Acrylic = false,
@@ -520,7 +520,7 @@ function WebhookManager()
             local LvlPlayer = game:GetService("Players").LocalPlayer.leaderstats.Level.Value
 
             local Embed = {
-                title = 'Space Hub',
+                title = 'ZeX Hub',
                 color = 0x8B26BB,
                 fields = {
                     { name = 'Player Profile', value = playerProfileUrl },
@@ -538,7 +538,7 @@ function WebhookManager()
                     Method = 'POST',
                     Headers = { ['Content-Type'] = 'application/json' },
                     Body = game:GetService('HttpService'):JSONEncode({
-                        username = 'Space Hub | Fisch',
+                        username = 'ZeX Hub | Fisch',
                         avatar_url = 'https://cdn.discordapp.com/icons/1241045437884923965/6e134ec00e5adf7fc7f82fcabce45e8a.webp?size=4096',
                         embeds = { Embed }
                     }),
@@ -614,9 +614,9 @@ end
 do
     local _25ms=Tabs.Home:AddButton({
         Title = "Copy Discord Invite",
-        Description = "discord.gg/bKfnyAXrHT, join for more leaks",
+        Description = "discord.gg/onlyzex, join for more leaks",
         Callback = function()
-            setclipboard("https://discord.gg/bKfnyAXrHT")
+            setclipboard("https://discord.gg/onlyzex")
         end
     })
     local section = Tabs.Home:AddSection("Change Log:")
@@ -1235,7 +1235,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Space Hub",
+    Title = "ZeX Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
